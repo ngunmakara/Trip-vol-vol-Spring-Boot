@@ -1,0 +1,217 @@
+body {
+  background: #f5f6f4;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= LEFT SIDE (COVER IMAGE) ================= */
+.left-side {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.quote-box {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.quote-box h2 {
+  color: #0011ff;
+  font-style: italic;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.quote-box p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* ================= RIGHT SIDE (FORM WRAPPER) ================= */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 25px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+}
+
+/* LOGO STYLES */
+.logo {
+  width: 75px;
+  height: 75px;
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.pic-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.pic-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-title {
+  color: #0011ff;
+  font-weight: 800;
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+.brand-sub {
+  letter-spacing: 4px;
+  color: #888;
+  font-size: 12px;
+}
+
+.welcome-title {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.welcome-text {
+  color: #666;
+  font-size: 18px;
+}
+
+/* FORM CONTROL STYLES */
+.form-control,
+.input-group-text {
+  border-radius: 18px;
+  height: 56px;
+}
+
+.input-group .form-control {
+  border-left: none;
+  border-right: none;
+}
+
+.input-group-text {
+  background: white;
+}
+
+.btn-login {
+  height: 56px;
+  background: #0011ff;
+  border: none;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn-login:hover {
+  background: #000edb;
+}
+
+.toggle-password {
+  cursor: pointer;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================== */
+
+/* 1. Tablet View (Max Width: 991px) */
+@media (max-width: 991px) {
+  .left-side {
+    display: none;
+  }
+
+  .login-wrapper {
+    padding: 40px 20px;
+  }
+
+  .brand-title {
+    font-size: 38px;
+  }
+
+  .welcome-title {
+    font-size: 32px;
+  }
+
+  .welcome-text {
+    font-size: 16px;
+  }
+}
+
+/* 2. Mobile View (Max Width: 576px) */
+@media (max-width: 576px) {
+  .login-wrapper {
+    padding: 30px 15px;
+  }
+
+  .logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+  }
+
+  .brand-title {
+    font-size: 32px;
+    margin-top: 15px;
+  }
+
+  .brand-sub {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .welcome-title {
+    font-size: 26px;
+  }
+
+  .welcome-text {
+    font-size: 14px;
+  }
+
+  .form-control,
+  .input-group-text,
+  .btn-login {
+    height: 50px;
+    font-size: 15px;
+  }
+
+  /* តម្រឹម Remember me & Forgot password លើទូរស័ព្ទតូចៗ */
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px;
+  }
+}
