@@ -18,118 +18,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* ================= HEADER / NAVBAR ================= */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  height: 10vh;
-  background-color: white;
-  box-shadow:
-    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 30px;
-
-  & .logo {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-
-    & img {
-      width: 90px;
-      height: 90px;
-      cursor: pointer;
-    }
-
-    & h4 {
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    & h4:hover {
-      transition: 0.3s all;
-      transform: scale(1.05);
-      background-color: white;
-      color: blue;
-    }
-  }
-
-  & ul {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-
-    & li {
-      list-style: none;
-
-      & a {
-        text-decoration: none;
-        font-size: 20px;
-        color: black;
-      }
-
-      & a:hover {
-        transition: 0.7s all;
-        background-color: white;
-        color: blue;
-      }
-    }
-  }
-
-  & .btn {
-    width: auto;
-    height: auto;
-    display: flex;
-    gap: 15px;
-
-    & button {
-      background-color: var(--primary-color);
-      padding: 9px 20px;
-      font-size: 19px;
-      border-radius: 5px;
-      color: white;
-      font-weight: 500;
-      border: none;
-      cursor: pointer;
-    }
-
-    & button:nth-child(1) {
-      background-color: rgba(128, 128, 128, 0.559);
-    }
-
-    & button:nth-child(1):hover {
-      transition: 0.7s all;
-      background: rgb(167, 159, 159);
-    }
-
-    & button:nth-child(2) {
-      background-color: blue;
-    }
-
-    & button:nth-child(2):hover {
-      transition: 0.7s all;
-      background: rgb(28, 32, 92);
-    }
-
-    & button a {
-      text-decoration: none;
-      color: white;
-    }
-  }
-}
-
 /* ================= HERO SECTION ================= */
 .hero-section {
   width: 90%;
-  height: 80vh;
-  background-color: brown;
   margin: auto;
   margin-top: 40px;
   border-radius: 20px;
@@ -139,537 +30,436 @@ body {
   background-position: center;
   place-content: center;
   place-items: center;
+  padding: 40px 20px;
+}
 
-  & .txt {
-    width: 60%;
-    height: auto;
+.hero-section .txt {
+  width: 60%;
+}
 
-    & h1 {
-      color: white;
-      font-size: 65px;
-      text-align: center;
-      font-family: var(--primary-font);
-      line-height: 140px;
-    }
+.hero-section .txt h1 {
+  color: white;
+  font-size: 65px;
+  text-align: center;
+  font-family: var(--primary-font);
+  line-height: 140px;
+}
 
-    & p {
-      font-family: var(--primary-font);
-      color: rgb(211, 204, 204);
-      font-size: 30px;
-      text-align: center;
-    }
-  }
+.hero-section .txt p {
+  font-family: var(--primary-font);
+  color: rgb(211, 204, 204);
+  font-size: 30px;
+  text-align: center;
+}
 
-  & .acrtion-bar {
-    width: 70%;
-    height: 12vh;
-    background-color: rgba(255, 255, 255, 0.838);
-    margin-top: 50px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 45px;
+.hero-section .acrtion-bar {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.838);
+  margin-top: 50px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 45px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    & .block {
-      width: auto;
-      height: auto;
-      display: flex;
-      align-items: center;
-      gap: 15px;
+.hero-section .acrtion-bar .block {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-      & #icon {
-        font-size: 30px;
-        color: gray;
-      }
+.hero-section .acrtion-bar .block #icon {
+  font-size: 30px;
+  color: gray;
+}
 
-      & p {
-        font-size: 25px;
-        color: gray;
-      }
-    }
+.hero-section .acrtion-bar .block p {
+  font-size: 25px;
+  color: gray;
+}
 
-    & .block:nth-child(4) {
-      & button {
-        padding: 13px 25px;
-        background-color: var(--primary-color);
-        color: white;
-        font-size: 22px;
-        font-weight: 500;
-        border: none;
-        border-radius: 8px;
+.hero-section .acrtion-bar .block:nth-child(4) button {
+  padding: 13px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+}
 
-        & #icon-serach {
-          color: white;
-          padding-right: 20px;
-        }
-      }
-    }
-  }
+.hero-section .acrtion-bar .block:nth-child(4) button #icon-serach {
+  color: white;
+  padding-right: 20px;
 }
 
 /* ================= MAIN CONTAINER ================= */
 .main-contain {
   width: 90%;
-  height: auto;
   margin: auto;
   margin-top: 30px;
+}
 
-  & .title {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.main-contain .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    & h1 {
-      font-family: var(--primary-font);
-      padding-bottom: 7px;
-    }
+.main-contain .title h1 {
+  font-family: var(--primary-font);
+  padding-bottom: 7px;
+}
 
-    & p {
-      font-size: 25px;
-      color: gray;
-      font-family: var(--primary-font);
-    }
+.main-contain .title p {
+  font-size: 25px;
+  color: gray;
+  font-family: var(--primary-font);
+}
 
-    & .link {
-      width: auto;
-      height: auto;
+.main-contain .title .link a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
 
-      & a {
-        font-size: 18px;
-        text-decoration: none;
-        color: var(--primary-color);
-      }
+.main-contain .title .link a:hover {
+  transition: 0.7s all;
+  color: red;
+}
 
-      & a:hover {
-        transition: 0.7s all;
-        background-color: rgb(255, 255, 255);
-        color: red;
-      }
-    }
-  }
+.main-contain .card {
+  transition: 0.3s all;
+  width: 100%;
+  background-color: white;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 10px;
+  padding-bottom: 15px;
+}
 
-  & .contain {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 50px;
-    margin-top: 30px;
+.main-contain .card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
 
-    & .card {
-      transition: 0.3s all;
-      width: 100%;
-      height: auto;
-      background-color: white;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-      border-radius: 10px;
-      padding-bottom: 15px;
+.main-contain .card .card-title {
+  width: 100%;
+  padding: 10px;
+}
 
-      & img {
-        width: 100%;
-        height: 280px;
-        object-fit: cover;
-        border-radius: 10px 10px 0px 0px;
-      }
+.main-contain .card .card-title h3 {
+  font-size: 23px;
+  padding-bottom: 5px;
+  font-family: var(--primary-font);
+}
 
-      & .card-title {
-        width: 100%;
-        height: auto;
-        padding: 10px;
+.main-contain .card .card-title p {
+  color: gray;
+  font-size: 19px;
+  font-family: var(--primary-font);
+}
 
-        & h3 {
-          font-size: 23px;
-          padding-bottom: 5px;
-          font-family: var(--primary-font);
-        }
+.main-contain .card .card-title .txt-price {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
 
-        & p {
-          color: gray;
-          font-size: 19px;
-          font-family: var(--primary-font);
-        }
+.main-contain .card .card-title .txt-price p {
+  color: var(--primary-color);
+  font-weight: 500;
+}
 
-        & .txt-price {
-          width: 100%;
-          height: auto;
-          margin-top: 15px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding-right: 20px;
+.main-contain .card .card-title .txt-price #icon {
+  background-color: rgba(196, 188, 188, 0.357);
+  padding-top: 8px;
+  padding-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 28px;
+}
 
-          & p {
-            color: var(--primary-color);
-            font-weight: 500;
-          }
-
-          & #icon {
-            background-color: rgba(196, 188, 188, 0.357);
-            padding-top: 8px;
-            padding-left: 1px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 28px;
-          }
-        }
-      }
-    }
-
-    & .card:hover {
-      transition: 0.3s all;
-      transform: scale(1.05);
-    }
-  }
+.main-contain .card:hover {
+  transition: 0.3s all;
+  transform: scale(1.05);
 }
 
 /* ================= TRAVEL CATEGORIES ================= */
 .travel-categories {
   width: 90%;
-  height: auto;
   margin: auto;
   margin-top: 40px;
+}
 
-  & h2 {
-    text-align: center;
-    font-family: var(--primary-font);
-    padding-bottom: 10px;
-    font-size: 30px;
-  }
+.travel-categories h2 {
+  text-align: center;
+  font-family: var(--primary-font);
+  padding-bottom: 10px;
+  font-size: 30px;
+}
 
-  & p {
-    text-align: center;
-    font-family: var(--primary-font);
-    padding-bottom: 20px;
-    font-size: 20px;
-    color: gray;
-  }
+.travel-categories > p {
+  text-align: center;
+  font-family: var(--primary-font);
+  padding-bottom: 20px;
+  font-size: 20px;
+  color: gray;
+}
 
-  & .item-catecgories {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 30px;
+.travel-categories .card-item {
+  height: 230px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+  place-content: center;
+}
 
-    & .card-item {
-      height: 230px;
-      width: 100%;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-      text-align: center;
-      place-content: center;
+.travel-categories .card-item #icon {
+  width: 65px;
+  height: 65px;
+  background-color: rgba(168, 217, 242, 0.744);
+  border-radius: 50%;
+  padding-top: 17px;
+  font-size: 25px;
+  color: var(--primary-color);
+}
 
-      & #icon {
-        width: 65px;
-        height: 65px;
-        background-color: rgba(168, 217, 242, 0.744);
-        border-radius: 50%;
-        padding-top: 17px;
-        font-size: 25px;
-        color: var(--primary-color);
-      }
+.travel-categories .card-item p {
+  color: black;
+  margin-top: 10px;
+}
 
-      & p {
-        color: black;
-        margin-top: 10px;
-      }
-    }
-
-    & .card-item:hover {
-      transition: 0.3s all;
-      transform: scale(1.05);
-    }
-  }
+.travel-categories .card-item:hover {
+  transition: 0.3s all;
+  transform: scale(1.05);
 }
 
 /* ================= EXCLUSIVE SECTION ================= */
 .sectio-exclusive {
   width: 90%;
-  height: auto;
   margin: auto;
   margin-top: 90px;
+}
 
-  & h1 {
-    font-family: var(--primary-font);
-  }
+.sectio-exclusive h1 {
+  font-family: var(--primary-font);
+}
 
-  & p {
-    font-family: var(--primary-font);
-    color: gray;
-    font-size: 20px;
-  }
+.sectio-exclusive > p {
+  font-family: var(--primary-font);
+  color: gray;
+  font-size: 20px;
+}
 
-  & .contain-item {
-    margin-top: 20px;
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 40px;
+.sectio-exclusive .card-item {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
+}
 
-    & .card-item {
-      height: 300px;
-      width: 100%;
-      background-color: white;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      border-radius: 20px;
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      padding-right: 30px;
+.sectio-exclusive .card-item img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
-      & img {
-        width: 300px;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px 0px 0px 20px;
-      }
+.sectio-exclusive .card-item .card-txt {
+  width: 100%;
+  padding: 20px 30px;
+}
 
-      & .card-txt {
-        width: 80%;
-        height: auto;
-        padding-bottom: 30px;
+.sectio-exclusive .card-item .card-txt .time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-        & .time {
-          width: auto;
-          height: auto;
-          display: flex;
-          align-items: center;
-          padding-top: 30px;
-          gap: 8px;
+.sectio-exclusive .card-item .card-txt .time #icon {
+  color: var(--primary-color);
+}
 
-          & #icon {
-            color: var(--primary-color);
-            margin-top: 10px;
-          }
+.sectio-exclusive .card-item .card-txt .time p {
+  font-size: 14px;
+  color: var(--primary-color);
+}
 
-          & p {
-            margin-top: 20px;
-            font-size: 14px;
-            color: var(--primary-color);
-          }
-        }
+.sectio-exclusive .card-item .card-txt h4 {
+  font-size: 28px;
+  font-family: var(--primary-font);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
 
-        & h4 {
-          font-size: 28px;
-          font-family: var(--primary-font);
-          padding-bottom: 10px;
-        }
+.sectio-exclusive .card-item .card-txt > p {
+  padding-bottom: 10px;
+}
 
-        & p {
-          padding-bottom: 10px;
-        }
+.sectio-exclusive .card-item .card-txt .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-        & .price {
-          width: 100%;
-          height: auto;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+.sectio-exclusive .card-item .card-txt .price del {
+  font-size: 25px;
+  font-family: var(--primary-font);
+  color: gray;
+}
 
-          & del {
-            font-size: 25px;
-            font-family: var(--primary-font);
-            color: gray;
-          }
+.sectio-exclusive .card-item .card-txt .price p {
+  font-size: 30px;
+  color: var(--primary-color);
+}
 
-          & p {
-            font-size: 30px;
-            color: var(--primary-color);
-          }
+.sectio-exclusive .card-item .card-txt .price button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-          & button {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-          }
+.sectio-exclusive .card-item .card-txt .price button:hover {
+  transition: 0.7s all;
+  background-color: rgb(154, 154, 167);
+}
 
-          & button:hover {
-            transition: 0.7s all;
-            background-color: rgb(154, 154, 167);
-          }
-        }
-      }
-    }
-
-    & .card-item:hover {
-      transition: 0.3s all;
-      transform: scale(1.05);
-    }
-  }
+.sectio-exclusive .card-item:hover {
+  transition: 0.3s all;
+  transform: scale(1.03);
 }
 
 /* ================= FOOTER ================= */
 .main-footer {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 80px 30px 30px;
   background-color: rgba(243, 243, 243, 0.822);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin-top: 80px;
+  padding: 40px 0;
+}
 
-  & .block {
-    width: 450px;
-    height: auto;
-    margin-left: 90px;
+.main-footer .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
 
-    & .logo {
-      width: auto;
-      height: auto;
-      display: flex;
-      align-items: center;
+.main-footer .logo img {
+  width: 60px;
+  height: 60px;
+}
 
-      & img {
-        width: 90px;
-        height: 90px;
-      }
+.main-footer .logo h4 {
+  font-size: 23px;
+  margin-left: 10px;
+}
 
-      & h4 {
-        font-size: 23px;
-      }
-    }
+.main-footer p {
+  font-size: 19px;
+  color: gray;
+  font-family: var(--primary-font);
+}
 
-    & p {
-      font-size: 19px;
-      color: gray;
-      font-family: var(--primary-font);
-      padding-left: 30px;
-    }
+.main-footer .block-icon {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
 
-    & .block-icon {
-      width: auto;
-      height: auto;
-      padding-left: 27px;
-      margin-top: 15px;
-      display: flex;
-      gap: 20px;
+.main-footer .block-icon #icon {
+  width: 35px;
+  height: 35px;
+  place-content: center;
+  border: 1px solid rgba(141, 136, 136, 0.627);
+  border-radius: 50%;
+}
 
-      & #icon {
-        width: 35px;
-        height: 35px;
-        place-content: center;
-        border: 1px solid rgba(141, 136, 136, 0.627);
-        border-radius: 50%;
-      }
+.main-footer .block-icon #icon:hover {
+  transition: 0.2s all;
+  transform: scale(1.05);
+  background-color: gray;
+}
 
-      & #icon:hover {
-        transition: 0.2s all;
-        transform: scale(1.05);
-        background-color: gray;
-      }
-    }
-  }
+.main-footer h4 {
+  font-size: 23px;
+  padding-top: 10px;
+}
 
-  & .block:nth-child(2),
-  .block:nth-child(3) {
-    padding-top: 29px;
+.main-footer .link {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
 
-    & h4 {
-      font-size: 23px;
-    }
+.main-footer .link a {
+  font-size: 18px;
+  color: gray;
+  text-decoration: none;
+  transition: 0.3s all;
+}
 
-    & .link {
-      width: auto;
-      height: auto;
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+.main-footer .link a:hover {
+  color: red;
+}
 
-      & a {
-        font-size: 18px;
-        color: gray;
-        text-decoration: none;
-        transition: 0.3s all;
-      }
+.main-footer .para {
+  margin-top: 20px;
+}
 
-      & a:hover {
-        color: red;
-      }
-    }
-  }
+.main-footer .para form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-  & .block:nth-child(4) {
-    width: 330px;
-    padding-top: 29px;
+.main-footer .para form input {
+  padding: 15px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  font-size: 18px;
+}
 
-    & h4 {
-      font-size: 23px;
-    }
+.main-footer .para form button {
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--primary-color);
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: 0.7s all;
+}
 
-    & .para {
-      margin-top: 20px;
-
-      & p {
-        padding-left: 0;
-      }
-
-      & form {
-        margin-top: 20px;
-        width: auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        & input {
-          padding: 20px 20px;
-          border-radius: 10px;
-          outline: none;
-          border: 1px solid gray;
-          font-size: 20px;
-        }
-
-        & button {
-          padding: 20px 20px;
-          border-radius: 10px;
-          border: none;
-          background-color: var(--primary-color);
-          font-size: 20px;
-          color: white;
-          cursor: pointer;
-          transition: 0.7s all;
-        }
-
-        & button:hover {
-          transition: 0.7s all;
-          background-color: rgb(170, 170, 194);
-        }
-      }
-    }
-  }
+.main-footer .para form button:hover {
+  transition: 0.7s all;
+  background-color: rgb(170, 170, 194);
 }
 
 /* ==========================================
-   RESPONSIVE DESIGN (MEDIA QUERIES)
+   RESPONSIVE DESIGN
    ========================================== */
 
-/* Tablet View (Max Width: 1024px) */
-@media screen and (max-width: 1024px) {
-  .navbar ul {
-    gap: 20px;
-  }
-
-  .hero-section {
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  .hero-section .txt {
-    width: 90%;
-  }
-
+@media screen and (max-width: 992px) {
   .hero-section .txt h1 {
     font-size: 45px;
     line-height: 70px;
@@ -681,66 +471,22 @@ body {
 
   .hero-section .acrtion-bar {
     width: 95%;
-    height: auto;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
     justify-content: center;
   }
-
-  .main-contain .contain {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .travel-categories .item-catecgories {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sectio-exclusive .contain-item {
-    grid-template-columns: 1fr;
-  }
-
-  .main-footer {
-    flex-wrap: wrap;
-    padding: 30px;
-    gap: 40px;
-  }
-
-  .main-footer .block {
-    margin-left: 0;
-    width: 45%;
-  }
 }
 
-/* Mobile View (Max Width: 768px) */
 @media screen and (max-width: 768px) {
-  .navbar {
-    height: auto;
-    flex-direction: column;
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .navbar ul li a {
-    font-size: 16px;
-  }
-
-  .navbar .btn button {
-    padding: 7px 14px;
-    font-size: 15px;
-  }
-
   .hero-section {
     width: 95%;
     margin-top: 20px;
     border-radius: 12px;
+  }
+
+  .hero-section .txt {
+    width: 100%;
   }
 
   .hero-section .txt h1 {
@@ -755,6 +501,7 @@ body {
   .hero-section .acrtion-bar {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
   }
 
   .hero-section .acrtion-bar .block {
@@ -783,21 +530,20 @@ body {
     font-size: 16px;
   }
 
-  .main-contain .contain {
-    grid-template-columns: 1fr;
+  .main-contain .card img {
+    height: 200px;
   }
 
   .travel-categories h2 {
     font-size: 24px;
   }
 
-  .travel-categories p {
+  .travel-categories > p {
     font-size: 16px;
   }
 
-  .travel-categories .item-catecgories {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+  .travel-categories .card-item {
+    height: 180px;
   }
 
   .sectio-exclusive {
@@ -808,42 +554,43 @@ body {
     font-size: 22px;
   }
 
-  .sectio-exclusive .contain-item .card-item {
-    height: auto;
+  .sectio-exclusive .card-item {
     flex-direction: column;
-    padding: 0 0 20px 0;
   }
 
-  .sectio-exclusive .contain-item .card-item img {
+  .sectio-exclusive .card-item img {
     width: 100%;
     height: 200px;
-    border-radius: 20px 20px 0 0;
   }
 
-  .sectio-exclusive .contain-item .card-item .card-txt {
-    width: 100%;
-    padding: 0 20px;
+  .sectio-exclusive .card-item .card-txt {
+    padding: 15px 20px;
   }
 
-  .sectio-exclusive .contain-item .card-item .card-txt h4 {
+  .sectio-exclusive .card-item .card-txt h4 {
     font-size: 20px;
   }
 
-  .main-footer {
-    flex-direction: column;
-    padding: 30px 20px;
+  .sectio-exclusive .card-item .card-txt .price button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-section .txt h1 {
+    font-size: 24px;
+    line-height: 38px;
   }
 
-  .main-footer .block {
-    width: 100%;
-    margin-left: 0;
+  .travel-categories .card-item {
+    height: 150px;
   }
 
-  .main-footer .block p {
-    padding-left: 0;
-  }
-
-  .main-footer .block .block-icon {
-    padding-left: 0;
+  .travel-categories .card-item #icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    padding-top: 13px;
   }
 }

@@ -18,403 +18,103 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* ================= HEADER / NAVBAR ================= */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  height: 10vh;
-  background-color: white;
-  box-shadow:
-    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 30px;
-
-  & .logo {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-
-    & img {
-      width: 90px;
-      height: 90px;
-      cursor: pointer;
-    }
-
-    & h4 {
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    & h4:hover {
-      transition: 0.3s all;
-      transform: scale(1.05);
-      background-color: white;
-      color: red;
-    }
-  }
-
-  & ul {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-
-    & li {
-      list-style: none;
-
-      & a {
-        text-decoration: none;
-        font-size: 20px;
-        color: black;
-      }
-
-      & a:hover {
-        transition: 0.7s all;
-        background-color: white;
-        color: red;
-      }
-    }
-  }
-
-  & .btn {
-    width: auto;
-    height: auto;
-    display: flex;
-    gap: 15px;
-
-    & button {
-      background-color: var(--primary-color);
-      padding: 9px 20px;
-      font-size: 19px;
-      border-radius: 5px;
-      color: white;
-      font-weight: 500;
-      border: none;
-      cursor: pointer;
-    }
-
-    & button:nth-child(1) {
-      background-color: rgba(128, 128, 128, 0.559);
-    }
-
-    & button:nth-child(1):hover {
-      transition: 0.7s all;
-      background: rgb(167, 159, 159);
-    }
-
-    & button:nth-child(2) {
-      background-color: blue;
-    }
-
-    & button:nth-child(2):hover {
-      transition: 0.7s all;
-      background: rgb(28, 32, 92);
-    }
-
-    & button a {
-      text-decoration: none;
-      color: white;
-    }
-  }
-}
-
 /* ================= PHOTO GALLERY SECTION ================= */
 .pic-alltrip {
   width: 90%;
-  height: auto;
   margin: auto;
   margin-top: 40px;
+}
 
-  & h1 {
-    font-family: var(--primary-font);
-  }
+.pic-alltrip h1 {
+  font-family: var(--primary-font);
+}
 
-  & .rating {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    width: auto;
-    height: auto;
-    margin-top: 20px;
+.pic-alltrip .rating {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
 
-    & p {
-      color: gray;
-      font-size: 23px;
+.pic-alltrip .rating p {
+  color: gray;
+  font-size: 23px;
+}
 
-      & #icon {
-        color: orange;
-      }
-    }
+.pic-alltrip .rating p #icon {
+  color: orange;
+}
 
-    & p:last-child {
-      & #icon2 {
-        color: gray;
-      }
-    }
-  }
+.pic-alltrip .rating p #icon2 {
+  color: gray;
+}
 
-  & .box-photo {
-    width: 100%;
-    height: 550px;
-    margin-top: 35px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.pic-alltrip .photo {
+  width: 100%;
+  height: 160px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s all;
+}
 
-    & .photo {
-      width: 100%;
-      height: 100%;
-      background-color: #f0f0f0;
-      transition: 0.3s all;
-      cursor: pointer;
+.pic-alltrip .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-      & img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
+.pic-alltrip .photo:nth-child(4) img {
+  filter: brightness(50%);
+}
 
-    & .photo:hover {
-      transition: 0.3s all;
-      transform: scale(1.02);
-    }
+.pic-alltrip .photo p {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  position: absolute;
+  z-index: 2;
+}
 
-    & .photo:nth-child(1) {
-      grid-row: span 2;
-      grid-column: span 2;
-      border-radius: 20px 0px 0px 20px;
-
-      & img {
-        border-radius: 20px 0px 0px 20px;
-      }
-    }
-
-    & .photo:nth-child(3) {
-      border-radius: 0px 20px 0px 0px;
-
-      & img {
-        border-radius: 0px 20px 0px 0px;
-      }
-    }
-
-    & .photo:nth-child(5) {
-      border-radius: 0px 0px 20px 0px;
-      position: relative;
-
-      & img {
-        border-radius: 0px 0px 20px 0px;
-        filter: brightness(50%);
-      }
-
-      & p {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 25px;
-        font-weight: 500;
-        position: absolute;
-      }
-    }
-  }
+.pic-alltrip .photo:hover {
+  transition: 0.3s all;
+  transform: scale(1.02);
 }
 
 /* ================= FOOTER ================= */
-.main-footer {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 80px 30px 30px;
-  background-color: rgba(243, 243, 243, 0.822);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  margin-top: 100px;
-
-  & .block {
-    width: 450px;
-    height: auto;
-
-    & .logo {
-      width: auto;
-      height: auto;
-      display: flex;
-      align-items: center;
-
-      & img {
-        width: 90px;
-        height: 90px;
-      }
-
-      & h4 {
-        font-size: 23px;
-      }
-    }
-
-    & p {
-      font-size: 19px;
-      color: gray;
-      font-family: var(--primary-font);
-      padding-left: 30px;
-    }
-
-    & .block-icon {
-      width: auto;
-      height: auto;
-      padding-left: 27px;
-      margin-top: 15px;
-      display: flex;
-      gap: 20px;
-
-      & #icon {
-        width: 35px;
-        height: 35px;
-        place-content: center;
-        border: 1px solid rgba(141, 136, 136, 0.627);
-        border-radius: 50%;
-      }
-    }
-  }
-
-  & .block:nth-child(2),
-  .block:nth-child(3) {
-    padding-top: 29px;
-
-    & h4 {
-      font-size: 23px;
-    }
-
-    & .link {
-      width: auto;
-      height: auto;
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-
-      & a {
-        font-size: 18px;
-        color: gray;
-        text-decoration: none;
-        transition: 0.3s all;
-      }
-
-      & a:hover {
-        color: red;
-      }
-    }
-  }
-
-  & .block:nth-child(4) {
-    width: 330px;
-    padding-top: 29px;
-
-    & h4 {
-      font-size: 23px;
-    }
-
-    & .para {
-      margin-top: 30px;
-
-      & p {
-        padding-left: 0;
-      }
-
-      & form {
-        margin-top: 20px;
-        width: auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        & input {
-          padding: 20px 20px;
-          border-radius: 10px;
-          outline: none;
-          border: 1px solid gray;
-          font-size: 20px;
-        }
-
-        & button {
-          padding: 20px 20px;
-          border-radius: 10px;
-          border: none;
-          background-color: var(--primary-color);
-          font-size: 20px;
-          color: white;
-          cursor: pointer;
-          transition: 0.7s all;
-        }
-
-        & button:hover {
-          transition: 0.7s all;
-          background-color: blue;
-        }
-      }
-    }
-  }
-}
 
 /* ==========================================
-   RESPONSIVE DESIGN (TABLET & MOBILE)
+   RESPONSIVE DESIGN
    ========================================== */
 
-/* 1. Tablet View (Max Width: 1024px) */
-@media screen and (max-width: 1024px) {
-  .navbar ul {
-    gap: 20px;
+/* Desktop View (Min Width: 992px) */
+@media screen and (min-width: 992px) {
+  .pic-alltrip .photo.photo-large {
+    height: 440px;
+    border-radius: 20px 0px 0px 20px;
   }
 
-  .pic-alltrip .box-photo {
-    height: 450px;
-    gap: 15px;
+  .pic-alltrip .photo.photo-large img {
+    border-radius: 20px 0px 0px 20px;
   }
 
-  .main-footer {
-    flex-wrap: wrap;
-    padding: 30px;
-    gap: 40px;
+  /* 2x2 grid on the right matches the tall photo height (440px = 2*212 + 16px gap) */
+  .pic-alltrip .photo {
+    height: 212px;
+    border-radius: 8px;
   }
 
-  .main-footer .block {
-    width: 45%;
+  .pic-alltrip .photo img {
+    border-radius: 8px;
   }
 }
 
-/* 2. Mobile View (Max Width: 768px) */
 @media screen and (max-width: 768px) {
-  /* Navbar Layout */
-  .navbar {
-    height: auto;
-    flex-direction: column;
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .navbar ul li a {
-    font-size: 16px;
-  }
-
-  .navbar .btn button {
-    padding: 7px 14px;
-    font-size: 15px;
-  }
-
-  /* Pic Alltrip Section */
   .pic-alltrip h1 {
     font-size: 24px;
   }
@@ -427,39 +127,131 @@ body {
     font-size: 18px;
   }
 
-  /* Photo Gallery Grid for Mobile */
-  .pic-alltrip .box-photo {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .pic-alltrip .box-photo .photo {
-    height: 220px;
+  .pic-alltrip .photo {
     border-radius: 12px !important;
   }
 
-  .pic-alltrip .box-photo .photo img {
+  .pic-alltrip .photo img {
     border-radius: 12px !important;
   }
 
-  /* Footer */
+  .pic-alltrip .photo p {
+    font-size: 18px;
+  }
+
   .main-footer {
-    flex-direction: column;
-    padding: 30px 20px;
     margin-top: 50px;
   }
+}
 
-  .main-footer .block {
-    width: 100%;
+@media screen and (max-width: 576px) {
+  .pic-alltrip .photo p {
+    font-size: 15px;
   }
+}
+.main-footer {
+  background-color: rgba(243, 243, 243, 0.822);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin-top: 100px;
+  padding: 40px 0;
+}
 
-  .main-footer .block p {
-    padding-left: 0;
-  }
+.main-footer .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
 
-  .main-footer .block .block-icon {
-    padding-left: 0;
-  }
+.main-footer .logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.main-footer .logo h4 {
+  font-size: 23px;
+  margin-left: 10px;
+}
+
+.main-footer p {
+  font-size: 19px;
+  color: gray;
+  font-family: var(--primary-font);
+}
+
+.main-footer .block-icon {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.main-footer .block-icon #icon {
+  width: 35px;
+  height: 35px;
+  place-content: center;
+  border: 1px solid rgba(141, 136, 136, 0.627);
+  border-radius: 50%;
+}
+
+.main-footer .block-icon #icon:hover {
+  transition: 0.2s all;
+  transform: scale(1.05);
+  background-color: gray;
+}
+
+.main-footer h4 {
+  font-size: 23px;
+  padding-top: 10px;
+}
+
+.main-footer .link {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.main-footer .link a {
+  font-size: 18px;
+  color: gray;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+
+.main-footer .link a:hover {
+  color: red;
+}
+
+.main-footer .para {
+  margin-top: 20px;
+}
+
+.main-footer .para form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-footer .para form input {
+  padding: 15px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  font-size: 18px;
+}
+
+.main-footer .para form button {
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--primary-color);
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: 0.7s all;
+}
+
+.main-footer .para form button:hover {
+  transition: 0.7s all;
+  background-color: rgb(170, 170, 194);
 }
